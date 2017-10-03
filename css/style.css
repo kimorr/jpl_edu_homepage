@@ -1,0 +1,290 @@
+/*//// GLOBAL STYLES ////*/
+
+* {
+	-moz-box-sizing: border-box; /* Firexfox */
+	-webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+	box-sizing: border-box; /* IE */
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body {
+	font-family: helvetica;
+	font-size: 20px;
+	color: #444;
+}
+
+/*//// MAIN NAV ////*/
+
+.main_nav.white {
+	width: 100%;
+	float: left;
+	color: white;
+	padding: 1em;
+}
+
+.dark {
+	color: #444;
+}
+
+.logo {
+	width: 350px;
+}
+
+header nav {
+	width: 65%;
+	float: right;
+	text-align: right;
+}
+
+header nav ul {
+	padding: 1em 1em 0 0;
+}
+
+header nav ul li {
+	display: inline;
+	font-size: .8em;
+	font-weight: 400;
+	padding-left: 1.5em;
+	letter-spacing: .025em;
+}
+
+header nav ul li:first-child {
+	text-transform: none;
+	font-size: 1.1em;
+	font-weight: bold;
+	padding-right: 1.5em;
+	border-right: 3px solid white;
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: bold;	
+}
+
+#signin {
+	background-color: Transparent;
+	border: 2px solid white;
+	font-size: .8em;
+	color: white;
+	letter-spacing: .08em;
+}
+
+/*//// PAGE HEADER ////*/
+
+.container.bleed {
+	width: 100%;
+}
+
+#hero {
+	background: url("https://www.jpl.nasa.gov/edu/images/home/camps.jpg") no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0 -300px;
+	height: 400px;
+}
+
+.floating_content {
+	width: 60%;
+	max-width: 700px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 235px;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 2;
+}
+
+h1 {
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	padding: .8em;
+	line-height: 1.4em;
+	color: white;
+}
+
+h1 .stem_animation {
+	color: #f87258;
+}
+
+#hero p {
+	color: white;
+	font-size: .9em;
+	font-weight: 300;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*//// HAPPENING NOW ////*/
+
+.container.padded {
+	width: 100%;
+	max-width: 1400px;
+	padding: 2em 3em;
+	color: #444;
+	margin: 0 auto;
+}
+
+h2 {
+	font-size: 1.1em;
+	font-weight: bold;
+	padding-bottom: 1.5em;
+}
+
+.top_stories li {
+	width: 32.33333%;
+	float: left;
+	/*border: 1px solid #ccc;*/
+	box-shadow: -.002em .05em .08em #ccc;
+	margin: 0 1% 1% 0;
+}
+
+.top_stories li img {
+	width: 100%;
+	min-height: 236px;
+}
+
+.label {
+	padding: .7em .7em .6em;
+	font-size: .65em;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: white;
+}
+
+.educators {
+	background-color: #3abf79;
+}
+
+.educators:after {
+	content: "For Educators";
+}
+
+.students {
+	background-color: #9759e0;
+}
+
+.students:after {
+	content: "For K-12 Students";
+}
+
+.interns {
+	background-color: #f87258;
+}
+
+.interns:after {
+	content: "For College Students";
+}
+
+.story_info {
+	background-color: white;
+	padding: 1em;
+	overflow: hidden;
+}
+
+.story_title {
+	font-size: .95em;
+	font-weight: bold;
+	margin-bottom: .5em;
+	overflow: hidden;
+}
+
+.story_description {
+	font-size: .85em;
+	line-height: 1.3em;
+	height: 4em;
+	margin-bottom: .5em;
+	overflow: hidden;
+}
+
+#more {
+	background-color: #2f81d5;
+	font-size: .7em;
+	color: white;
+	letter-spacing: .05em;
+	float: right;
+	margin: 1em;
+}
+
+/*//// ABOUT US ////*/
+
+#about {
+	background: url("https://www.jpl.nasa.gov/edu/images/home/camps.jpg") no-repeat center;
+	background-attachment: fixed;
+	background-position: -500px -200px;
+	height: 250px;
+	font-size: .85em;
+	line-height: 1.5em;
+}
+
+.about_section {
+	width: 20%;
+	float: left;
+	padding-right: 2em;
+	color: white;
+}
+
+.about_section:first-child {
+	width: 25%;
+	max-width: 300px;
+	padding-right: 2rem;
+}
+
+.about_section:last-child {
+	width: 16%;
+	padding-right: 0;
+}
+
+#about h3, #about h3 a {
+	font-size: .9em;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding-bottom: 1em;
+	text-transform: uppercase;
+}
+
+.about_list li {
+	padding-bottom: .5em;
+}
+
+.about_list a {
+	text-decoration: none;
+	color: white;
+	font-size: .95em;
+	font-weight: 300;
+	padding-bottom: .2em;
+	border-bottom: 2px solid #2f81d5;
+}
+
+.about_list a:hover {
+	color: #2f81d5;
+	font-weight: bold;
+}
+
+#about input {
+	padding: 1em;
+	width: 100%;
+	border: none;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0.3); 
+	font-size: .85em;
+	margin: 1em 0;
+}
+
+#about input::placeholder {
+	color: white;
+	font-size: 1.1em;
+}

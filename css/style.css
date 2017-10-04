@@ -145,14 +145,13 @@ h2 {
 .top_stories li {
 	width: 32.33333%;
 	float: left;
-	/*border: 1px solid #ccc;*/
 	box-shadow: -.002em .05em .08em #ccc;
 	margin: 0 1% 1% 0;
 }
 
 .top_stories li img {
 	width: 100%;
-	min-height: 236px;
+	/*min-height: 236px;*/
 }
 
 .label {
@@ -222,8 +221,9 @@ h2 {
 
 #about {
 	background: url("https://www.jpl.nasa.gov/edu/images/home/camps.jpg") no-repeat center;
+	background-size: cover;
 	background-attachment: fixed;
-	background-position: -500px -200px;
+	background-position: bottom;
 	height: 250px;
 	font-size: .85em;
 	line-height: 1.5em;
@@ -266,7 +266,7 @@ h2 {
 	font-size: .95em;
 	font-weight: 300;
 	padding-bottom: .2em;
-	border-bottom: 2px solid #2f81d5;
+	border-bottom: 1px dotted white;
 }
 
 .about_list a:hover {
@@ -287,4 +287,109 @@ h2 {
 #about input::placeholder {
 	color: white;
 	font-size: 1.1em;
+	font-weight: 300;
+}
+
+.overlay {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+	height: 100%;
+}
+
+/*//// FEATURED DESTINATIONS ////*/
+
+.container.bleed.gray {
+	background-color: #f6f6f6;
+}
+
+.slide_control {
+	width: 5%;
+	float: left;
+	margin: 5em 0;
+}
+
+.slide_control .slide_forward {
+	float: right;
+}
+
+.slide_backward, .slide_forward {
+	width: 50px;
+	height: 45px;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: -.005em .025em .08em #ccc;
+	color: #666;
+	text-align: center;
+	font-size: 2em;
+}
+
+.slide_backward:hover, .slide_forward:hover {
+	background-color: #444;
+	color: white;
+}
+
+.slide_backward:after {
+	content: "\2039";
+}
+
+.slide_forward:after {
+	content: "\203A";
+}
+
+.slideshow {
+	width: 100%;
+	margin: 1em 0 2em;
+}
+
+#featured ul {
+	width: 90%;
+	float: left;
+}
+
+#featured ul li {
+	width: 23%;
+	min-height: 320px;
+	float: left;
+	background-color: white;
+	box-shadow: -.002em .05em .08em #ccc;
+	margin-left: 1em;
+}
+
+#featured img {
+	height: 150px;
+	width: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-bottom: 1em;
+}
+
+#featured .story_info {
+	text-align: center;
+}
+
+/*//// EDUCATOR RESOURCES ////*/
+
+h2 a {
+	text-decoration: none;
+	color: #444;
+} 
+
+h2 a:after {
+	content: " >";
+	color: #2f81d5;
+	font-weight: 300;
+}
+
+h2 a:hover {
+	color: #2f81d5;
+}
+
+#resources ul {
+	width: 70%;
+	float: left;
+}
+
+#resources ul li {
+	width: 33%;
+	float: left;
+	padding-right: 1em;
 }

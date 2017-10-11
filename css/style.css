@@ -87,8 +87,8 @@ button {
 	background: url("https://www.jpl.nasa.gov/edu/images/home/camps.jpg") no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: 0 -300px;
 	height: 400px;
+	background-color: #222;
 }
 
 .floating_content {
@@ -97,19 +97,27 @@ button {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 235px;
 	margin: 0 auto;
 	text-align: center;
 	z-index: 2;
+	overflow: hidden;
+}
+
+.floating_content.center {
+	top: 175px;
+}
+
+.floating_content.bottom {
+	top: 250px;
 }
 
 h1 {
 	color: white;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: bold;
 	text-align: center;
 	padding: .8em;
-	line-height: 1.4em;
+	line-height: 1.5em;
 	color: white;
 }
 
@@ -126,6 +134,55 @@ h1 .stem_animation {
 	margin: 0 auto;
 }
 
+/*//// SELECTION NAV CTA ////*/
+
+.container.cta {
+	width: 100%;
+	padding: 1em 0;
+	background-color: #222;
+}
+
+.expand_list_btn {
+	color: #f0f0f0;
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+}
+
+.expand_list_btn:hover {
+	color: #2f81d5;
+}
+
+.selection_nav ul {
+	display: none;
+	width: 100%;
+	font-size: 1em;
+	text-align: center;
+	padding-top: 1em;
+}
+
+.selection_nav ul li {
+	padding: 1.5em 0;
+	color: white;
+}
+
+.selection_nav ul li:hover {
+	background-color: #2f81d5;
+}
+
+.selection_nav .arrow {
+  width: 0; 
+  height: 0;
+  float: right;
+  margin: .2em .3em 0 0;
+}
+
+.arrow.down {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #2f81d5;
+}
+
 /*//// HAPPENING NOW ////*/
 
 .container.padded {
@@ -137,13 +194,14 @@ h1 .stem_animation {
 }
 
 h2 {
-	font-size: 1.1em;
-	font-weight: bold;
+	font-size: 1em;
 	padding-bottom: 1.5em;
 }
 
 .top_stories li {
-	width: 32.33333%;
+	width: 32%;
+	max-height: 450px;
+	min-height: 370px;
 	float: left;
 	box-shadow: -.002em .05em .08em #ccc;
 	margin: 0 1% 1% 0;
@@ -151,7 +209,6 @@ h2 {
 
 .top_stories li img {
 	width: 100%;
-	/*min-height: 236px;*/
 }
 
 .label {
@@ -194,27 +251,31 @@ h2 {
 }
 
 .story_title {
-	font-size: .95em;
+	font-size: 1.1em;
 	font-weight: bold;
-	margin-bottom: .5em;
+	line-height: 1.3em;
 	overflow: hidden;
+	height: 2.5em;
 }
 
 .story_description {
 	font-size: .85em;
 	line-height: 1.3em;
 	height: 4em;
-	margin-bottom: .5em;
+	margin: .5em 0;
 	overflow: hidden;
 }
 
-#more {
+.btn {
 	background-color: #2f81d5;
 	font-size: .7em;
 	color: white;
 	letter-spacing: .05em;
+	margin: 1em 0;
+}
+
+#more {
 	float: right;
-	margin: 1em;
 }
 
 /*//// ABOUT US ////*/
@@ -227,6 +288,7 @@ h2 {
 	height: 250px;
 	font-size: .85em;
 	line-height: 1.5em;
+	overflow: hidden;
 }
 
 .about_section {
@@ -239,11 +301,10 @@ h2 {
 .about_section:first-child {
 	width: 25%;
 	max-width: 300px;
-	padding-right: 2rem;
 }
 
 .about_section:last-child {
-	width: 16%;
+	width: 15%;
 	padding-right: 0;
 }
 
@@ -301,13 +362,13 @@ h2 {
 	background-color: #f6f6f6;
 }
 
-.slide_control {
-	width: 5%;
+.slide_control.backward {
+	margin-right: 2em;
 	float: left;
-	margin: 5em 0;
 }
 
-.slide_control .slide_forward {
+.slide_control.forward {
+	margin-left: 2em;
 	float: right;
 }
 
@@ -340,13 +401,9 @@ h2 {
 	margin: 1em 0 2em;
 }
 
-#featured ul {
-	width: 90%;
-	float: left;
-}
 
 #featured ul li {
-	width: 23%;
+	width: 20%;
 	min-height: 320px;
 	float: left;
 	background-color: white;
@@ -383,13 +440,138 @@ h2 a:hover {
 	color: #2f81d5;
 }
 
+#resources {
+	padding-bottom: 2em;
+}
+
 #resources ul {
-	width: 70%;
+	width: 75%;
 	float: left;
 }
 
 #resources ul li {
-	width: 33%;
+	width: 30%;
 	float: left;
-	padding-right: 1em;
+	height: 400px;
+	margin-right: 1em;
+	position: relative;
+	background-color: #3abf79;
 }
+
+.resource_img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border: 1px solid #f6f6f6;
+}
+
+.resource_container {
+	width: 100%;
+	height: 400px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.resource_info {
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	padding: 1em;
+}
+
+.resource_info .story_title {
+	color: white;
+	line-height: 1.5em;
+	height: inherit;
+	text-align: center;
+}
+
+.resource_info .story_description {
+	color: #f0f0f0;
+	font-size: .9em;
+	height: inherit;
+	text-align: center;
+}
+
+.rollover_info {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(58, 191, 121, 0.9);
+	width: 100%;
+	height: 400px;
+}
+
+.rollover_info p {
+	position: absolute;
+	bottom: 3em;
+	width: 100%;
+	left: 0;
+	font-size: .7em;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.download_icon {
+	position: absolute;
+	left: 40%;
+	bottom: -8%;
+	width: 25%;
+	margin: 0 auto;
+}
+
+.download_icon img {
+	width: 55px;
+	border-radius: 50%;
+	box-shadow: -.05em .08em .08em #ccc;
+}
+
+h3 {
+	font-size: 1.1em;
+	line-height: 1.3em;
+	font-weight: bold;
+}
+
+/*//// COLLECTIONS ////*/
+
+#collections {
+	padding-bottom: 2em;
+}
+
+.slideshow_content {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.collection_info {
+	width: 30%;
+	float: left;
+	margin: 0 3%;
+}
+
+.collection_pieces {
+	width: 40%;
+	float: left;
+}
+
+.collection_pieces li {
+	width: 50%;
+	float: left;
+	padding: 0 .5em .5em 0;
+}
+
+.collection_pieces img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+}
+
+.overlay_title {
+	display: none;
+}
+
+

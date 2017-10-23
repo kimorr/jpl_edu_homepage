@@ -249,6 +249,8 @@ h3 a:hover {
 
 .slideshow_fluid ul {
 	width: max-content;
+	width: -moz-max-content;
+  	width: -webkit-max-content;
 	position: relative;
 }
 
@@ -868,8 +870,14 @@ h1 .stem_animation {
 }
 
 #meet_interns .slideshow_fluid {
-	max-width: max-content;
+	width: max-content;
+	width: -moz-max-content;
+  	width: -webkit-max-content;
+	position: relative;
 	height: max-content;
+	height: -moz-max-content;
+  	height: -webkit-max-content;
+	position: relative;
 	position: relative;
 	margin-bottom: 2em;
 }
@@ -987,6 +995,11 @@ h1 .stem_animation {
 	padding-right: 2em;
 }
 
+.kids_nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
 .kids_nav ul li:last-child {
 	padding-right: 0;
 }
@@ -1009,7 +1022,9 @@ h1 .stem_animation {
 }
 
 #exploration .slideshow_fluid {
-	max-width: max-content;
+	width: max-content;
+	width: -moz-max-content;
+  	width: -webkit-max-content;
 	height: 400px;
 	position: relative;
 }
@@ -1114,7 +1129,12 @@ h1 .stem_animation {
 	.top_stories li {
 		width: 100%;
 		max-height: max-content;
+		max-height: -moz-max-content;
+		max-height: -webkit-max-content;
+		position: relative;
 		min-height: max-content;
+		min-height: -moz-max-content;
+		min-height: -webkit-max-content;
 		border: 1px solid #ccc;
 		margin: 1% 0;
 		position: relative;
